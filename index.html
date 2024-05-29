@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - OBT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="logoobt-removebg-preview.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            min-height: 800px;
+        }
+        body {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            background: rgb(0,0,0,0.6)url("5509862.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+            background-blend-mode: darken;
+        }
+
+        .container--top {
+            width: 100%;
+            height: 65px;
+            background-color: #475569; 
+        }
+
+
+        .div--horizontal--bar {
+            background-color: rgb(51, 65, 85);
+            width: 350px;
+            height: 35px;
+            margin-top: 18px;
+            border-radius: 10px;
+            display: flex;
+
+        }
+
+        .div--horizontal--bar > p {
+            color: white;
+            margin-top: 5px;
+            margin-left: 15px;
+
+        }
+        .div--1 {
+            display: flex;
+            justify-content: center;
+            margin-top: -3px;
+        }
+
+        .img--search {
+            height: 20px;
+            width: 20px;
+            margin-left: 20px;
+            margin-top: 6.5px;
+        }
+
+        .div--content--container {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            margin-top: 25px;
+            width: fit-content;
+
+        }
+        .div--content--container > div {
+            height: 165px;
+            width: 250px;
+            border-radius: 7px;
+            background-color: rgb(148, 163, 184);
+            
+        } 
+
+        .div--pai1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        #div--block11:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #div--block11 {
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+        }
+
+        #div--block22:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #div--block22 {
+            transition: 0.3s;
+        }
+
+        #div--block33:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #div--block33 {
+            transition: 0.3s;
+        }
+
+        #div--block44 {
+            transition: 0.3s;
+        }
+
+        #div--block44:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+
+        .div--pai2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+
+        }
+
+        .div--content--container2 {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            margin-top: 70px;
+            width: fit-content;
+
+        }
+
+        .div--content--container2 > div {
+            height: 165px;
+            width: 250px;
+            border-radius: 7px;
+            background-color: rgb(148, 163, 184);
+            
+        } 
+
+        .p--pesquisar {
+            cursor: pointer;
+        }
+
+        #div--block111:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #div--block111 {
+            transition: 0.3s;
+        }
+
+        #div--block222:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #div--block222 {
+            transition: 0.3s;
+        }
+
+        #div--block333:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #div--block333 {
+            transition: 0.3s;
+        }
+
+        #div--block444:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #div--block444 {
+            transition: 0.3s;
+        }
+
+        #div--p--1-1 {
+            margin-top: 170px;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+        }
+
+        #div--button {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        #div--button1--1 {
+            width: 120px;
+            height: 25px;
+            background-color: #4ade80;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            line-height: 25px;
+        }
+
+        #div--button1--2 {
+            width: 120px;
+            height: 25px;
+            background-color: #f87171;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            line-height: 25px;
+        }
+
+        #div--button1--3 {
+            width: 120px;
+            height: 25px;
+            background-color: #f87171;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            line-height: 25px;
+        }
+
+        #div--button1--4 {
+            width: 120px;
+            height: 25px;
+            background-color: #4ade80;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            line-height: 25px;
+        }
+
+        #img--checked {
+            margin-top: 2px;
+            margin-left: 10px;
+        }
+
+        #span--intacto {
+            margin-left: 10px;
+        }
+
+        #planta--img {
+            height: 100px;
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        #div--planta--img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div-textblock1 {
+            margin-top: -105px;
+        }
+
+        #satelite--img {
+            height: 100px;
+            width: 100px;
+            margin-top: 25px;
+        }
+
+        #organismo--img {
+            height: 100px;
+            width: 100px;
+            margin-top: 25px;
+        }
+
+        #tecido--img {
+            height: 100px;
+            width: 100px;
+            margin-top: 25px;
+        }
+
+        #proteina--img {
+            height: 100px;
+            width: 100px;
+            margin-top: 25px;
+        }
+
+        #fluido--img {
+            height: 100px;
+            width: 100px;
+            margin-top: 25px;
+        }
+
+        #radiacao--img {
+            height: 100px;
+            width: 100px;
+            margin-top: 25px;
+        }
+
+        #osso--img {
+            height: 100px;
+            width: 100px;
+            margin-top: 25px;
+        }
+
+        #div--especial {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #div--pai--top-buttons {
+            display: flex;
+            justify-content: center;
+        }
+        #div--container--top--buttons {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 50px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        #div--pai--top--buttons > div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #div--container--top--buttons > div > p {
+            text-align: center;
+        }
+
+        #div--container--top--buttons > div:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        #div--topbutton1 {
+            height: 25px;
+            width: 110px;
+            background-color: #4ade80;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #div--topbutton2 {
+            height: 25px;
+            width: 110px;
+            background-color: #f87171;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #div--topbutton3 {
+            height: 25px;
+            width: 110px;
+            border-radius: 5px;
+            background-color: rgb(148, 163, 184);
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+            
+        }
+
+        #levar--outrapag {
+            width: fit-content;
+            height: fit-content;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 👇 DOCUMENTAÇÃO DO CÓDIGO 👇 -->
+
+    <!-- BARRA HORIZONTAL CINZA NA PARTE DE CIMA (BARRA DE PESQUISA) -->
+    <div class="container--top">
+        <div class="div--1">
+            <div class="div--horizontal--bar">
+                <img src="search.png" alt="search img" class="img--search">
+                <p class="p--pesquisar">Pesquisar</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 👇 BOTÕES PARA FILTRAGEM 👇 -->
+    <div id="div--pai--top-buttons">
+        <div id="div--container--top--buttons">
+            <div id="div--topbutton1">
+                <p>Intactos</p>
+            </div>
+            <div id="div--topbutton2">
+                <p>Avariados</p>
+            </div>
+            <div id="div--topbutton3">
+                <p>Todos</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRIMEIRA LINHA DE 4 BLOCOS -->
+
+    <!-- 👇 PRIMEIRO BLOCO 👇 -->
+    <div class="div--pai1">
+        <div class="div--content--container">
+            <div class="div--block1" id="div--block11">
+                <div id="div--especial">
+                    <div id="div--planta--img"><img src="dor-nas-articulacoes.png" alt="osso icon" id="osso--img"></div>
+                        <div id="div-textblock1">
+                            <div id="div--p--1-1">
+                                <p>Densidade óssea e muscular em</p>
+                                <p>microgravidade</p>
+                            <div id="div--button">
+                                <div id="div--button1--1">
+                                    <img src="checked.png" alt="checked icon" height="20px" width="20px" id="img--checked">
+                                    <span id="span--intacto">Intacto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 👇 SEGUNDO BLOCO 👇 -->
+            <div class="div--block2" id="div--block22">
+                <div id="div--planta--img"><img src="sinal-de-radiacao.png" alt="radiação icon" id="radiacao--img"></div>
+                <div id="div-textblock1">
+                    <div id="div--p--1-1">
+                        <p>Materias resistentes à radiação</p>
+                        <p>espacial</p>
+                        <div id="div--button">
+                            <div id="div--button1--2">
+                                <img src="perto.png" alt="checked icon" height="20px" width="20px" id="img--checked">
+                                <span id="span--intacto">Avariado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 👇 TERCEIRO BLOCO 👇 -->
+            <div class="div--block3" id="div--block33">
+                <div id="div--planta--img"><img src="tubo-de-ensaio.png" alt="fluido icon" id="fluido--img"></div>
+                <div id="div-textblock1">
+                    <div id="div--p--1-1">
+                        <p>Comportamento de fluidos em</p>
+                        <p>microgravidade</p>
+                        <div id="div--button">
+                            <div id="div--button1--3">
+                                <img src="perto.png" alt="checked icon" height="20px" width="20px" id="img--checked">
+                                <span id="span--intacto">Avariado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 👇 QUARTO BLOCO 👇 -->
+            <div class="div--block4" id="div--block44">
+                <div id="div--planta--img"><img src="bacterias (1).png" alt="microrganimo icon" id="organismo--img"></div>
+                <div id="div-textblock1">
+                    <div id="div--p--1-1">
+                        <p>Micro organismos em ambiente</p>
+                        <p>extremo</p>
+                        <div id="div--button">
+                            <div id="div--button1--4">
+                                <img src="checked.png" alt="checked icon" height="20px" width="20px" id="img--checked">
+                                <span id="span--intacto">Intacto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEGUNDA LINHA DE 4 BLOCOS -->
+
+    <!-- 👇 PRIMEIRO BLOCO 👇 -->
+    <div class="div--pai2">
+        <div class="div--content--container2">
+            <div class="div--block11" id="div--block111">
+                <div class="div--block4" id="div--block44">
+                    <div id="div--planta--img"><img src="plantas.png" alt="planta icon" id="planta--img"></div>
+                    <div id="div-textblock1">
+                        <div id="div--p--1-1">
+                            <p>Crescimento de plantas em</p>
+                            <p>Microgravidade</p>
+                            <div id="div--button">
+                                <div id="div--button1--4">
+                                    <img src="checked.png" alt="checked icon" height="20px" width="20px" id="img--checked">
+                                    <span id="span--intacto">Intacto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 👇 SEGUNDO BLOCO 👇 -->
+            <div class="div--block22" id="div--block222">
+                <div class="div--block4" id="div--block44">
+                    <div id="div--planta--img"><img src="molecula.png" alt="tecido icon" id="tecido--img"></div>
+                    <div id="div-textblock1">
+                        <div id="div--p--1-1">
+                            <p>Regeneração de tecidos em</p>
+                            <p>Microgravidade</p>
+                            <div id="div--button">
+                                <div id="div--button1--2">
+                                    <img src="perto.png" alt="checked icon" height="20px" width="20px" id="img--checked">
+                                    <span id="span--intacto">Avariado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 👇 TERCEIRO BLOCO 👇 -->
+            <div class="div--block33" id="div--block333">
+                <div class="div--block4" id="div--block44">
+                    <div id="div--planta--img"><img src="satelite.png" alt="satelite icon icon" id="satelite--img"></div>
+                    <div id="div-textblock1">
+                        <div id="div--p--1-1">
+                            <p>Comunicação por rádio no</p>
+                            <p>Espaço</p>
+                            <div id="div--button">
+                                <div id="div--button1--4">
+                                    <img src="checked.png" alt="checked icon" height="20px" width="20px" id="img--checked">
+                                    <span id="span--intacto">Intacto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 👇 QUARTO BLOCO 👇 -->
+            <div class="div--block44" id="div--block444"> 
+                <div class="div--block4" id="div--block44">
+                    <div id="div--planta--img"><img src="proteina.png" alt="proteina icon" id="proteina--img"></div>
+                    <div id="div-textblock1">
+                        <div id="div--p--1-1">
+                            <p>Cristalização de proteínas em</p>
+                            <p>Microgravidade</p>
+                            <div id="div--button">
+                                <div id="div--button1--2">
+                                    <img src="perto.png" alt="checked icon" height="20px" width="20px" id="img--checked">
+                                    <span id="span--intacto">Avariado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        /* JS PARA ABRIR AS ABAS DE CADA BLOCO */
+        const bloco1_1 = document.getElementById("div--block11");
+        const bloco2_1 = document.getElementById("div--block22");
+        const bloco3_1 = document.getElementById("div--block33");
+        const bloco4_1 = document.getElementById("div--block44"); 
+
+        const bloco1_2 = document.getElementById("div--block111");
+        const bloco2_2 = document.getElementById("div--block222");
+        const bloco3_2 = document.getElementById("div--block333");
+        const bloco4_2 = document.getElementById("div--block444");
+
+        bloco1_1.addEventListener("click", ()=> {
+            window.open("pagina1_1.html", "_blank")
+        }) 
+
+        bloco2_1.addEventListener("click", ()=> {
+            window.open("pagina2_1.html", "_blanck")
+        })
+
+        bloco1_2.addEventListener("click", ()=> {
+            window.open("pagina1_2.html", "_blanck")
+        })
+
+        bloco4_1.addEventListener("click", ()=> {
+            window.open("pagina4_1.html", "_blanck")
+        })
+
+        bloco3_1.addEventListener("click", ()=> {
+            window.open("pagina3_1.html", "_blanck")
+        })
+
+        bloco3_2.addEventListener("click", ()=> {
+            window.open("pagina3_2.html", "_blanck")
+        })
+
+        bloco4_2.addEventListener("click", ()=> {
+            window.open("pagina4_2.html", "_blanck")
+        })
+
+        bloco2_2.addEventListener("click", ()=> {
+            window.open("pagina2_2.html", "_blanck")
+        })
+
+        var button_intacto = document.getElementById("div--topbutton1");
+        var button_avariado = document.getElementById("div--topbutton2");
+        var button_todos = document.getElementById("div--topbutton3");
+
+        /* OS 4 BLOCOS DA PRIMEIRA LINHA */
+        var div_block1_1 = document.getElementById("div--block11");
+        var div_block2_1 = document.getElementById("div--block22");
+        var div_block3_1 = document.getElementById("div--block33");
+        var div_block4_1 = document.getElementById("div--block44");
+
+        /* OS 4 BLOCOS DA SEGUNDA LINHA */
+        var div_block1_2 = document.getElementById("div--block111");
+        var div_block2_2 = document.getElementById("div--block222");
+        var div_block3_2 = document.getElementById("div--block333");
+        var div_block4_2 = document.getElementById("div--block444");
+
+        /* BLOCOS VERMELHOS
+        var div_block2_1 = document.getElementById("div--block22");
+        var div_block3_1 = document.getElementById("div--block33");
+        var div_block2_2 = document.getElementById("div--block222");
+        var div_block4_2 = document.getElementById("div--block444");
+        /* BLOCOS VERDES 
+        var div_block1_1 = document.getElementById("div--block11");
+        var div_block4_1 = document.getElementById("div--block44");
+        var div_block1_2 = document.getElementById("div--block111");
+        var div_block3_2 = document.getElementById("div--block333");
+        
+
+        /* FUNÇÃO DO BOTÃO "INTACTO" */
+        button_intacto.addEventListener("click", function () {
+            div_block2_1.style.display = 'none';
+            div_block3_1.style.display = 'none';
+            div_block2_2.style.display = 'none';
+            div_block4_2.style.display = 'none';
+
+            div_block1_1.style.display = 'block';
+            div_block4_1.style.display = 'block';
+            div_block1_2.style.display = 'block';
+            div_block3_2.style.display = 'block';
+
+
+
+        });
+
+        /* FUNÇÃO DO BOTÃO "AVARIADO" */
+        button_avariado.addEventListener("click", function () {
+            div_block1_1.style.display = 'none';
+            div_block4_1.style.display = 'none';
+            div_block1_2.style.display = 'none';
+            div_block3_2.style.display = 'none';
+
+
+            div_block2_1.style.display = 'block';
+            div_block3_1.style.display = 'block';
+            div_block2_2.style.display = 'block';
+            div_block4_2.style.display = 'block';
+
+
+        });
+    
+
+        /* FUNÇÃO DO BOTÃO "TODOS" */
+        button_todos.addEventListener("click", function () {
+            div_block1_1.style.display = 'block';
+            div_block2_1.style.display = 'block';
+            div_block3_1.style.display = 'block';
+            div_block4_1.style.display = 'block';
+            div_block1_2.style.display = 'block';
+            div_block2_2.style.display = 'block';
+            div_block3_2.style.display = 'block';
+            div_block4_2.style.display = 'block';
+
+        });
+
+    </script>
+</body>
+</html>
